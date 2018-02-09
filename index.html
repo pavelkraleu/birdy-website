@@ -15,76 +15,71 @@
 
     <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
     <!-- Plugin CSS -->
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/creative.css" rel="stylesheet">
+    <link href="css/creative.css?ver=0.0.8" rel="stylesheet">
 
   </head>
 
   <body id="page-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top" style="color:black;">Birdy</a>
-        <!--<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">-->
-          <!--<span class="navbar-toggler-icon"></span>-->
-        <!--</button>-->
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">CZ</a>
-            </li>
-            <!--<li class="nav-item">-->
-              <!--<a class="nav-link js-scroll-trigger" href="#services">Services</a>-->
-            <!--</li>-->
-            <!--<li class="nav-item">-->
-              <!--<a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>-->
-            <!--</li>-->
-            <!--<li class="nav-item">-->
-              <!--<a class="nav-link js-scroll-trigger" href="#contact">Contact</a>-->
-            <!--</li>-->
-          </ul>
+    <nav class="nav">
+      <div class="nav__content layoutWidth">
+        <div class="nav__section">
+          <a class="nav__item nav__item--title">Birdy</a>
+          <span class="nav__divider">&middot;</span>
+          <a class="nav__item">How It Works</a>
+          <span class="nav__divider">&middot;</span>
+          <a class="nav__item">Real Time Data</a>
+          <span class="nav__divider">&middot;</span>
+          <a class="nav__item">Register Your RFID</a>
+        </div>
+        <!--
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        -->
+        <div class="nav__section">
+          <a class="nav__item">CZ</a>
+          <span class="nav__divider">/</span>
+          <a class="nav__item nav__item--selected">EN</a>
+          <span class="nav__divider">/</span>
+          <a class="nav__item">JP</a>
         </div>
       </div>
     </nav>
 
-    <header class="masthead text-center d-flex">
+    <header class="header">
 
-      <div class="fullscreen-bg">
-        <video loop muted autoplay poster="img/header_image_comp.jpg" class="fullscreen-bg__video">
+      <div class="header__background">
+        <video loop muted autoplay poster="img/header_image_comp.jpg" class="header__background__object">
           <source src="img/header_video.mp4" type="video/mp4">
         </video>
       </div>
 
-      <div class="container my-auto">
-        <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <h1 class="text-uppercase">
-              <strong>Blockchain connected bird feeder</strong>
-            </h1>
-            <!--<hr>-->
-          </div>
-          <div class="col-lg-8 mx-auto">
-            <p class="text-uppercase">More birds you feed, more Ethereum you make</p>
-            <!--<a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>-->
-          </div>
+      <div class="header__content">
+        <div class="layoutWidth">
+          <h1 class="header__title">Blockchain connected bird feeder</h1>
+          <p class="header__subtitle">More birds you feed, more Ethereum you make</p>
+          <button class="header__action button button--flat button--arrowDown">See How It Works</button>
         </div>
       </div>
+
     </header>
 
-    <section class="bg-primary" style="padding-bottom: 0px;">
+    <section style="padding-bottom: 0px;">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">How it works</h2>
+          <div class="col-lg-8 mx-auto">
+            <h2 class="section-heading">How it works</h2>
             <hr class="light my-4">
-            <p class="text-faded mb-4">
+            <p class=" mb-4">
             ulla enim ipsum, accumsan id justo quis, cursus eleifend justo. Praesent euismod tincidunt augue, quis euismod tellus consectetur at. Vivamus sit amet ex vel mauris efficitur elementum
             </p>
             <!--<a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>-->
@@ -97,10 +92,10 @@
     <section class="bg-primary" style="padding-bottom: 0px;">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">Real time data</h2>
+          <div class="col-lg-8 mx-auto">
+            <h2 class="section-heading">Real time data</h2>
             <hr class="light my-4">
-                        <p class="text-faded mb-4">
+                        <p class=" mb-4">
 
             ulla enim ipsum, accumsan id justo quis, cursus eleifend justo. Praesent euismod tincidunt augue, quis euismod tellus consectetur at. Vivamus sit amet ex vel mauris efficitur elementum
             </p>
@@ -149,10 +144,10 @@
     <section class="bg-primary" style="padding-bottom: 0px;">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">Register your RFID card</h2>
+          <div class="col-lg-8 mx-auto">
+            <h2 class="section-heading">Register your RFID card</h2>
             <hr class="light my-4">
-            <p class="text-faded mb-4">
+            <p class=" mb-4">
 
             ulla enim ipsum, accumsan id justo quis, cursus eleifend justo. Praesent euismod tincidunt augue, quis euismod tellus consectetur at. Vivamus sit amet ex vel mauris efficitur elementum
             </p>
@@ -173,9 +168,9 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-10 mx-auto">
-            <h2 class="section-heading text-white">Hardware</h2>
+            <h2 class="section-heading">Hardware</h2>
 
-            <p class="text-faded mb-4">
+            <p class=" mb-4">
               <img src="img/laptop_feeder.jpg" style="width:300px; float:right; margin: 10px">
               Nulla enim ipsum, accumsan id justo quis, cursus eleifend justo. Praesent euismod tincidunt augue, quis euismod tellus consectetur at. Vivamus sit amet ex vel mauris efficitur elementum in condimentum risus. Nunc quis dui leo. In sit amet venenatis lacus, eget ornare mauris. Pellentesque convallis purus non dolor blandit efficitur. Donec feugiat malesuada diam et rutrum. Integer ut augue elit. Phasellus vulputate purus nec tellus pharetra rutrum. Curabitur mollis, nulla et consequat viverra, ipsum orci auctor nisl, sed lacinia quam elit vitae mauris. Duis elementum mauris lorem, in pellentesque diam porttitor sit amet. Nullam ac odio eu turpis efficitur ultrices sit amet nec dui. Nulla maximus molestie justo nec laoreet. Aliquam sed mattis risus. Pellentesque finibus felis vel lacus placerat, egestas interdum erat pharetra. Nunc feugiat viverra lacus nec tincidunt.
             </p>
@@ -188,9 +183,9 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-10 mx-auto">
-            <h2 class="section-heading text-white">Smart contract</h2>
+            <h2 class="section-heading">Smart contract</h2>
 
-            <p class="text-faded mb-4">
+            <p class=" mb-4">
               <img src="img/sublime_sceenshot.png" style="width:300px; float:right; margin: 10px">
               Nulla enim ipsum, accumsan id justo quis, cursus eleifend justo. Praesent euismod tincidunt augue, quis euismod tellus consectetur at. Vivamus sit amet ex vel mauris efficitur elementum in condimentum risus. Nunc quis dui leo. In sit amet venenatis lacus, eget ornare mauris. Pellentesque convallis purus non dolor blandit efficitur. Donec feugiat malesuada diam et rutrum. Integer ut augue elit. Phasellus vulputate purus nec tellus pharetra rutrum. Curabitur mollis, nulla et consequat viverra, ipsum orci auctor nisl, sed lacinia quam elit vitae mauris. Duis elementum mauris lorem, in pellentesque diam porttitor sit amet. Nullam ac odio eu turpis efficitur ultrices sit amet nec dui. Nulla maximus molestie justo nec laoreet. Aliquam sed mattis risus. Pellentesque finibus felis vel lacus placerat, egestas interdum erat pharetra. Nunc feugiat viverra lacus nec tincidunt.
             </p>
@@ -203,9 +198,9 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-10 mx-auto">
-            <h2 class="section-heading text-white">Lessons learned</h2>
+            <h2 class="section-heading">Lessons learned</h2>
 
-            <p class="text-faded mb-4">
+            <p class=" mb-4">
               <img src="img/laptop_feeder.jpg" style="width:300px; float:right; margin: 10px">
               Nulla enim ipsum, accumsan id justo quis, cursus eleifend justo. Praesent euismod tincidunt augue, quis euismod tellus consectetur at. Vivamus sit amet ex vel mauris efficitur elementum in condimentum risus. Nunc quis dui leo. In sit amet venenatis lacus, eget ornare mauris. Pellentesque convallis purus non dolor blandit efficitur. Donec feugiat malesuada diam et rutrum. Integer ut augue elit. Phasellus vulputate purus nec tellus pharetra rutrum. Curabitur mollis, nulla et consequat viverra, ipsum orci auctor nisl, sed lacinia quam elit vitae mauris. Duis elementum mauris lorem, in pellentesque diam porttitor sit amet. Nullam ac odio eu turpis efficitur ultrices sit amet nec dui. Nulla maximus molestie justo nec laoreet. Aliquam sed mattis risus. Pellentesque finibus felis vel lacus placerat, egestas interdum erat pharetra. Nunc feugiat viverra lacus nec tincidunt.
             </p>
@@ -222,9 +217,9 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-10 mx-auto">
-            <h2 class="section-heading text-white">LoRa</h2>
+            <h2 class="section-heading">LoRa</h2>
 
-            <p class="text-faded mb-4">
+            <p class=" mb-4">
               <img src="img/laptop_feeder.jpg" style="width:300px; float:right; margin: 10px">
               Nulla enim ipsum, accumsan id justo quis, cursus eleifend justo. Praesent euismod tincidunt augue, quis euismod tellus consectetur at. Vivamus sit amet ex vel mauris efficitur elementum in condimentum risus. Nunc quis dui leo. In sit amet venenatis lacus, eget ornare mauris. Pellentesque convallis purus non dolor blandit efficitur. Donec feugiat malesuada diam et rutrum. Integer ut augue elit. Phasellus vulputate purus nec tellus pharetra rutrum. Curabitur mollis, nulla et consequat viverra, ipsum orci auctor nisl, sed lacinia quam elit vitae mauris. Duis elementum mauris lorem, in pellentesque diam porttitor sit amet. Nullam ac odio eu turpis efficitur ultrices sit amet nec dui. Nulla maximus molestie justo nec laoreet. Aliquam sed mattis risus. Pellentesque finibus felis vel lacus placerat, egestas interdum erat pharetra. Nunc feugiat viverra lacus nec tincidunt.
             </p>
@@ -295,7 +290,7 @@
               <!--<img class="img-fluid" src="img/portfolio/thumbnails/1.jpg" alt="">-->
               <!--<div class="portfolio-box-caption">-->
                 <!--<div class="portfolio-box-caption-content">-->
-                  <!--<div class="project-category text-faded">-->
+                  <!--<div class="project-category ">-->
                     <!--Category-->
                   <!--</div>-->
                   <!--<div class="project-name">-->
@@ -310,7 +305,7 @@
               <!--<img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">-->
               <!--<div class="portfolio-box-caption">-->
                 <!--<div class="portfolio-box-caption-content">-->
-                  <!--<div class="project-category text-faded">-->
+                  <!--<div class="project-category ">-->
                     <!--Category-->
                   <!--</div>-->
                   <!--<div class="project-name">-->
@@ -325,7 +320,7 @@
               <!--<img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">-->
               <!--<div class="portfolio-box-caption">-->
                 <!--<div class="portfolio-box-caption-content">-->
-                  <!--<div class="project-category text-faded">-->
+                  <!--<div class="project-category ">-->
                     <!--Category-->
                   <!--</div>-->
                   <!--<div class="project-name">-->
@@ -340,7 +335,7 @@
               <!--<img class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">-->
               <!--<div class="portfolio-box-caption">-->
                 <!--<div class="portfolio-box-caption-content">-->
-                  <!--<div class="project-category text-faded">-->
+                  <!--<div class="project-category ">-->
                     <!--Category-->
                   <!--</div>-->
                   <!--<div class="project-name">-->
@@ -355,7 +350,7 @@
               <!--<img class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">-->
               <!--<div class="portfolio-box-caption">-->
                 <!--<div class="portfolio-box-caption-content">-->
-                  <!--<div class="project-category text-faded">-->
+                  <!--<div class="project-category ">-->
                     <!--Category-->
                   <!--</div>-->
                   <!--<div class="project-name">-->
@@ -370,7 +365,7 @@
               <!--<img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">-->
               <!--<div class="portfolio-box-caption">-->
                 <!--<div class="portfolio-box-caption-content">-->
-                  <!--<div class="project-category text-faded">-->
+                  <!--<div class="project-category ">-->
                     <!--Category-->
                   <!--</div>-->
                   <!--<div class="project-name">-->
@@ -384,7 +379,7 @@
       <!--</div>-->
     <!--</section>-->
 
-    <section class="bg-dark text-white">
+    <section class="bg-dark">
       <div class="container text-center">
         <h2 class="mb-4">Source code is on Github</h2>
         <a class="btn btn-light btn-xl sr-button" href="http://startbootstrap.com/template-overviews/creative/">Check it out</a>
