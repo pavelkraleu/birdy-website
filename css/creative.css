@@ -535,15 +535,15 @@ p {
 }
 
 .button--arrowDown::before {
-  background: url("/icons/basic.regular.arrowDown.svg");
+  background: url("icons/basic.regular.arrowDown.svg");
 }
 
 .button--play::before {
-  background: url("/icons/ui.regular.play.svg");
+  background: url("icons/ui.regular.play.svg");
 }
 
 .button--external::before {
-  background: url("/icons/ui.regular.external.svg");
+  background: url("icons/ui.regular.external.svg");
 }
 
 .button:focus {

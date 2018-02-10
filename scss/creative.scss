@@ -231,15 +231,15 @@ $nav__height: 80px;
     }
 
     &--arrowDown::before {
-        background: url('/icons/basic.regular.arrowDown.svg');
+        background: url('icons/basic.regular.arrowDown.svg');
     }
 
     &--play::before {
-        background: url('/icons/ui.regular.play.svg');
+        background: url('icons/ui.regular.play.svg');
     }
 
     &--external::before {
-        background: url('/icons/ui.regular.external.svg');
+        background: url('icons/ui.regular.external.svg');
     }
 
     &:focus {
