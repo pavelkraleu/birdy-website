@@ -1,4 +1,4 @@
-window.addEventListener('load', function() {
+$(document).ready(function() {
 
     // Checking if Web3 has been injected by the browser (Mist/MetaMask)
     if (typeof web3 !== 'undefined') {
@@ -11,56 +11,57 @@ window.addEventListener('load', function() {
     }
     // Now you can start your app & access web3 freely:
     $('#txAddress').val(web3.eth.defaultAccount);
-    var abi = [
-        {
-            "constant": true,
-            "inputs": [],
-            "name": "birdsSince",
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "uint256"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "constant": true,
-            "inputs": [],
-            "name": "donorsCounter",
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "uint256"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "constant": false,
-            "inputs": [
-                {
-                    "name": "_uid",
-                    "type": "bytes32"
-                },
-                {
-                    "name": "_address",
-                    "type": "address"
-                }
-            ],
-            "name": "registerUID",
-            "outputs": [],
-            "payable": false,
-            "stateMutability": "nonpayable",
-            "type": "function"
-        }
-    ];
-    var contract = web3.eth.contract(abi).at("0xa92fc9BcBF2F87C36F0654619751a3AcC88a1b57")
 })
+
+var abi = [
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "birdsSince",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "donorsCounter",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "_uid",
+                "type": "bytes32"
+            },
+            {
+                "name": "_address",
+                "type": "address"
+            }
+        ],
+        "name": "registerUID",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+];
+var contract = web3.eth.contract(abi).at("0xa92fc9BcBF2F87C36F0654619751a3AcC88a1b57");
 
 $('#UIDReg').off().click(function(){
     $('#UIDReg').prop('disabled', true);
