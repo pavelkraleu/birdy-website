@@ -70,7 +70,7 @@ $('#UIDReg').off().click(function(){
 
     if (myUID != "" && myAdd != "") {
         contract.registerUID(
-            web3.toHex(myUID),
+            myUID,
             myAdd,
             function(r) {
                 console.log("TxHash: " + r);
