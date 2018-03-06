@@ -44,13 +44,15 @@
           </a>
         </div>
 
-        <div class="nav__section">
-          <a class="nav__item">CZ</a>
-          <span class="nav__divider">/</span>
-          <a class="nav__item nav__item--selected">EN</a>
-          <span class="nav__divider">/</span>
-          <a class="nav__item">JP</a>
-        </div>
+        <!--<div class="nav__section">-->
+          <!--<a class="nav__item">CZ</a>-->
+          <!--<span class="nav__divider">/</span>-->
+          <!--<a class="nav__item nav__item&#45;&#45;selected">EN</a>-->
+          <!--<span class="nav__divider">/</span>-->
+          <!--<a class="nav__item">JP</a>-->
+        <!--</div>-->
+
+
       </div>
     </nav>
 
@@ -82,12 +84,16 @@
       <div class="layoutWidth">
         <div class="section">
           <div class="section__video">
-            <img src="img/foxes-placeholder-16x9.png" alt=""  class="section__video__background">
+            <img src="img/with_sky.jpg" alt=""  class="section__video__background">
             <div class="section__video__fade section__video__fade--right"></div>
           </div>
           <div class="section__content">
             <h2>How It Works</h2>
-            <p>ulla enim ipsum, accumsan id justo quis, cursus eleifend justo. Praesent euismod tincidunt augue, quis euismod tellus consectetur at. Vivamus sit amet ex vel mauris efficitur elementum</p>
+            <p>
+              Birdy is installed in Prague, Czech Republic and it's budget is made up of small voluntary contributions by people which want to support birds in local area.<br>
+              Birdy's sensor counts birds flying in and uses that number in the smart contract, so your reward is equal to how many birds were attracted by the seeds and grains you brought.<br>
+              Before you do that, it is neccessary that you fill in the serial number of any kind of RFID card you are going to use and ethereum adress you would like to get the reward in on the website. Then, when you come to feed the birds, you just read your RFID card on the NFC reader and your ethereum adress will be used in the smart contract until another person reads his RFID card.
+            </p>
             <button class="button button--flat button--play">Play Video</button>
           </div>
         </div>
@@ -98,40 +104,45 @@
       <div class="layoutWidth">
         <div class="section__content">
           <h2>Real Time Data</h2>
-          <p>Praesent euismod tincidunt augue, quis euismod tellus consectetur at. Vivamus sit amet ex vel mauris efficitur elementum. Lorem ipsum dolor sit amet.</p>
+          <p>
+            Feeder sends every hour how many birds has visited. Weather information in Prague, where is feeder placed is obtained from Yahoo Wather API.
+            Data are recorded not only on Ethereum Blockchain, but also in <a href="https://docs.google.com/spreadsheets/d/1b-I_sqDUSi4DLrNH9eQgt1vGZ0ZJme892QrYkxmm1eg/edit#gid=0">Google Spreadsheet</a>.
+          </p>
         </div>
       </div>
 
       <div class="section__chart">
 
         <div id="line_top_x"></div>
+
+        <img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTs6V7jyEmthUZur6LorhXdk64WYxaCRfuGZkATecqiBnEjMlHJ1LAyaK7tNAPL52aIoL1WJDv9m1U3/pubchart?oid=637816965&format=image">
         
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script type="text/javascript">
-          google.charts.load('current', {'packages':['corechart']});
-          google.charts.setOnLoadCallback(drawChart);
+        <!--<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>-->
+        <!--<script type="text/javascript">-->
+          <!--google.charts.load('current', {'packages':['corechart']});-->
+          <!--google.charts.setOnLoadCallback(drawChart);-->
 
-          function drawChart() {
-            var data = google.visualization.arrayToDataTable([
-              ['Year', 'Sales', 'Expenses'],
-              ['2004',  1000,      400],
-              ['2005',  1170,      460],
-              ['2006',  660,       1120],
-              ['2007',  1030,      540]
-            ]);
+          <!--function drawChart() {-->
+            <!--var data = google.visualization.arrayToDataTable([-->
+              <!--['Year', 'Sales', 'Expenses'],-->
+              <!--['2004',  1000,      400],-->
+              <!--['2005',  1170,      460],-->
+              <!--['2006',  660,       1120],-->
+              <!--['2007',  1030,      540]-->
+            <!--]);-->
 
-            var options = {
-              // title: 'Company Performance',
-              curveType: 'function',
-              legend: { position: 'bottom' },
-                height: 300
-            };
+            <!--var options = {-->
+              <!--// title: 'Company Performance',-->
+              <!--curveType: 'function',-->
+              <!--legend: { position: 'bottom' },-->
+                <!--height: 300-->
+            <!--};-->
 
-            var chart = new google.visualization.LineChart(document.getElementById('line_top_x'));
+            <!--var chart = new google.visualization.LineChart(document.getElementById('line_top_x'));-->
 
-            chart.draw(data, options);
-          }
-        </script>
+            <!--chart.draw(data, options);-->
+          <!--}-->
+        <!--</script>-->
 
         </div>
     </section>
@@ -141,7 +152,11 @@
       <div class="layoutWidth">
         <div class="section__content">
           <h2>Register Your RFID Card</h2>
-          <p>Vivamus sit amet ex vel mauris efficitur elementum. Enim ipsum, accumsan id justo quis, cursus eleifend justo.</p>
+          <p>
+            Please submit UID of RFID card you will use and also Ethereum address on Kovan network where you want to receive reward.
+            You need to have browser extension <a href="https://metamask.io/">MetaMask</a>.
+            To get UID of your RFID you can use an Android phone with <a href="https://play.google.com/store/apps/details?id=se.anyro.nfc_reader&hl=en">NFC Reader</a> app.
+          </p>
           <form class="form" action="">
             <label class="field">
               <span class="field__label">Card UID</span>
@@ -165,18 +180,24 @@
 
             <div class="section__list__item">
               <div class="section__list__item__image__container">
-                <img class="section__list__item__image" src="img/laptop_feeder.jpg" />
+                <img class="section__list__item__image" src="img/breadboard.jpg" />
               </div>
               <h3 class="section__list__item__title">Hardware</h3>
-              <p class="section__list__item__text">Nulla enim ipsum, accumsan id justo quis, cursus eleifend justo. Praesent euismod tincidunt augue, quis euismod tellus consectetur at. Vivamus sit amet ex vel mauris efficitur elementum in condimentum risus. Nunc quis dui leo. In sit amet venenatis lacus, eget ornare mauris.</p>
+              <p class="section__list__item__text">
+                Feeder runs on board SODAQ ExpLoRer which handles bird counting, connection to the LoRa network, NFC reader and also power management.
+                Feeder is connected to charger every evening and battery is stored in five 18650s.
+              </p>
             </div>
 
             <div class="section__list__item">
               <div class="section__list__item__image__container">
-                <img class="section__list__item__image" src="img/laptop_feeder.jpg" />
+                <img class="section__list__item__image" src="img/smart_contract.png" />
               </div>
               <h3 class="section__list__item__title">Smart Contract</h3>
-              <p class="section__list__item__text">Nulla enim ipsum, accumsan id justo quis, cursus eleifend justo. Praesent euismod tincidunt augue, quis euismod tellus consectetur at. Vivamus sit amet ex vel mauris efficitur elementum in condimentum risus. Nunc quis dui leo. In sit amet venenatis lacus, eget ornare mauris.</p>
+              <p class="section__list__item__text">
+                No one is in charge of the money, the smart contract itself is.
+
+              </p>
             </div>
 
             <div class="section__list__item">
@@ -192,7 +213,10 @@
                 <img class="section__list__item__image" src="img/laptop_feeder.jpg" />
               </div>
               <h3 class="section__list__item__title">LoRa</h3>
-              <p class="section__list__item__text">Nulla enim ipsum, accumsan id justo quis, cursus eleifend justo. Praesent euismod tincidunt augue, quis euismod tellus consectetur at. Vivamus sit amet ex vel mauris efficitur elementum in condimentum risus. Nunc quis dui leo. In sit amet venenatis lacus, eget ornare mauris.</p>
+              <p class="section__list__item__text">
+                Feeder sends its data over LoRa.
+                Connectivity has been kindly supplied by <a href="https://www.cra.cz/objevte-svet-iot">Ceske Radiokomunikace</a>
+              </p>
             </div>
 
           </div>
@@ -206,8 +230,8 @@
       <div class="layoutWidth">
         <div class="section__content">
           <h2 class="section__title">Source Code On Github</h2>
-          <p class="section__subtitle">@pavelkraleu/birdy-website</p>
-          <a class="button button--flat button--external">Open Github</a>
+          <p class="section__subtitle">@pavelkraleu/birdy-main</p>
+          <a class="button button--flat button--external" href="https://github.com/pavelkraleu/birdy-main">Open Github</a>
         </div>
       </div>
     </section>
@@ -216,12 +240,24 @@
       <div class="layoutWidth">
         <div class="section__content">
           <h2>Who Made This Possible</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lectus nibh, pellentesque non urna vitae, cursus maximus turpis. Maecenas nibh felis, pretium nec viverra eget, viverra nec metus.</p>
+          <p>
+            This project wouldn't be possible without those people.
+          </p>
 
           <div class="section__list">
 
             <div class="section__list__item">
               <h3 class="section__list__item__title">Pavel Král</h3>
+              <p class="section__list__item__text">Main developer and an amazing person ❤️</p>
+            </div>
+
+            <div class="section__list__item">
+              <h3 class="section__list__item__title">Josef Jelacic</h3>
+              <p class="section__list__item__text">Main developer and an amazing person ❤️</p>
+            </div>
+
+            <div class="section__list__item">
+              <h3 class="section__list__item__title">Ondřej Bárta</h3>
               <p class="section__list__item__text">Main developer and an amazing person ❤️</p>
             </div>
 
