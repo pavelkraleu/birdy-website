@@ -29,28 +29,33 @@
     <!-- Navigation -->
     <nav
       class="nav"
-      data-0="background: rgba(255, 255, 255, 0); backdrop-filter: blur(0px)"
-      data-768="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(32px)">
+      data-0="background: rgba(255, 255, 255, 0); backdrop-filter: blur(0px); box-shadow: 0 0px 0px rgba(0, 0, 0, 0);"
+      data-768="background: rgba(255, 255, 255, 0.99); backdrop-filter: blur(32px); box-shadow: 0 16px 64px rgba(0, 0, 0, 0.025);">
       <div class="nav__content layoutWidth">
         <div class="nav__section">
           <a class="nav__item nav__item--title" onclick="skrollrInstance.animateTo(0, { duration: 500 })">Birdy</a>
           <span class="nav__divider">&middot;</span>
-          <a class="nav__item" onclick="skrollrInstance.animateTo(768, { duration: 500 })">How It Works</a>
+          <a class="nav__item" href="#how-it-works">How It Works</a>
           <span class="nav__divider">&middot;</span>
-          <a class="nav__item">Real Time Data</a>
+          <a class="nav__item" href="#real-time-data">Real Time Data</a>
           <span class="nav__divider">&middot;</span>
-          <a class="nav__item">
-            <button class="button">Register Your RFID Card</button>
-          </a>
+          <a class="nav__item" href="#register-rfid">Register Your RFID</a>
+          <a class="nav__item button" href="https://kovan.etherscan.io/address/0x65e6726f6e7a7bc48b6a173f56e436f29e8951d0">Smart Contract</a>
         </div>
 
+        <!--<div class="nav__section">-->
+          <!--<a class="nav__item">CZ</a>-->
+          <!--<span class="nav__divider">/</span>-->
+          <!--<a class="nav__item nav__item&#45;&#45;selected">EN</a>-->
+          <!--<span class="nav__divider">/</span>-->
+          <!--<a class="nav__item">JP</a>-->
+        <!--</div>-->
+
         <div class="nav__section">
-          <a class="nav__item">CZ</a>
-          <span class="nav__divider">/</span>
-          <a class="nav__item nav__item--selected">EN</a>
-          <span class="nav__divider">/</span>
-          <a class="nav__item">JP</a>
+          <a href="" class="nav__item button button--external">Open In Github</a>
         </div>
+
+
       </div>
     </nav>
 
@@ -70,15 +75,17 @@
         <div class="layoutWidth">
           <h1 class="header__title">Blockchain connected bird feeder</h1>
           <p class="header__subtitle">More birds you feed, more Ethereum you make</p>
-          <button class="header__action button button--flat button--arrowDown">See How It Works</button>
-          <button class="header__action button button--flat button--external">Open In Github</button>
+          <a class="header__action button button--flat button--arrowDown" href="#how-it-works">See How It Works</a>
+          <!--
+            <a class="header__action button button--flat button--external" href="https://github.com/pavelkraleu/birdy-main" target="_blank">Open In Github</a>
+          -->
         </div>
       </div>
 
     </header>
 
 
-    <section class="section section--video section--howItWorks">
+    <section class="section section--video section--howItWorks" id="how-it-works">
       <div class="layoutWidth">
         <div class="section">
           <div class="section__video">
@@ -87,14 +94,16 @@
           </div>
           <div class="section__content">
             <h2>How It Works</h2>
-            <p>ulla enim ipsum, accumsan id justo quis, cursus eleifend justo. Praesent euismod tincidunt augue, quis euismod tellus consectetur at. Vivamus sit amet ex vel mauris efficitur elementum</p>
+            <p>Birdy is installed in Prague, Czech Republic and it's budget is made up of small voluntary contributions by people which want to support birds in local area.</p>
+            <p>Birdy's sensor counts birds flying in and uses that number in the smart contract, so your reward is equal to how many birds were attracted by the seeds and grains you brought.</p>
+            <p>Before you do that, it is neccessary that you fill in the serial number of any kind of RFID card you are going to use and ethereum adress you would like to get the reward in on the website. Then, when you come to feed the birds, you just read your RFID card on the NFC reader and your ethereum adress will be used in the smart contract until another person reads his RFID card.</p>
             <button class="button button--flat button--play">Play Video</button>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section--realTimeData">
+    <section class="section section--realTimeData" id="real-time-data">
       <div class="layoutWidth">
         <div class="section__content">
           <h2>Real Time Data</h2>
@@ -105,6 +114,10 @@
       <div class="section__chart">
 
         <div id="line_top_x"></div>
+
+        <div class="layoutWidth">
+          <img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTs6V7jyEmthUZur6LorhXdk64WYxaCRfuGZkATecqiBnEjMlHJ1LAyaK7tNAPL52aIoL1WJDv9m1U3/pubchart?oid=637816965&format=image">
+        </div>
         
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script type="text/javascript">
@@ -137,25 +150,39 @@
     </section>
 
 
-    <section class="section section--registerRFIDCard">
-      <div class="layoutWidth">
-        <div class="section__content">
-          <h2>Register Your RFID Card</h2>
-          <p>Vivamus sit amet ex vel mauris efficitur elementum. Enim ipsum, accumsan id justo quis, cursus eleifend justo.</p>
-          <form class="form" action="">
-            <label class="field">
-              <span class="field__label">Card UID</span>
-              <input type="text" class="field__input" placeholder="01020304050607" />
-            </label>
-            <label class="field">
-              <span class="field__label">Ethereum Ropsten Address</span>
-              <input type="text" class="field__input" placeholder="0x00d8Ae40D9a06d0E7a2877B62E32eB959Afbe16D" />
-            </label>
-            <button class="button button" type="submit">Submit</button>
-          </form>
+    <div class="layoutWidth">
+      <section class="section section--registerRFIDCard" id="register-rfid"
+        data-bottom-bottom="box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);"
+        data-top-top="box-shadow: 0 16px 128px rgba(0, 0, 0, 0.1);">
+        <div class="layoutWidth">
+          <div class="section__content">
+            <div class="grid">
+              <div class="grid__column">
+                <h2>Register Your RFID Card</h2>
+                <p>
+                  Please submit UID of RFID card you will use and also Ethereum address on Kovan network where you want to receive reward.
+                  You need to have browser extension <a href="https://metamask.io/">MetaMask</a>.
+                  To get UID of your RFID you can use an Android phone with <a href="https://play.google.com/store/apps/details?id=se.anyro.nfc_reader&hl=en">NFC Reader</a> app.
+                </p>
+              </div>
+              <div class="grid__column">
+                <form class="form" action="">
+                  <label class="field">
+                    <span class="field__label">Card UID</span>
+                    <input id="txUID" type="text" class="field__input" placeholder="01020304050607" />
+                  </label>
+                  <label class="field">
+                    <span class="field__label">Ethereum Ropsten Address</span>
+                    <input id="txAddress" type="text" class="field__input" placeholder="0x00d8Ae40D9a06d0E7a2877B62E32eB959Afbe16D" />
+                  </label>
+                  <button id="UIDReg" class="button" type="submit">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
 
     <section class="section section--">
@@ -195,19 +222,9 @@
               <p class="section__list__item__text">Nulla enim ipsum, accumsan id justo quis, cursus eleifend justo. Praesent euismod tincidunt augue, quis euismod tellus consectetur at. Vivamus sit amet ex vel mauris efficitur elementum in condimentum risus. Nunc quis dui leo. In sit amet venenatis lacus, eget ornare mauris.</p>
             </div>
 
+            <div class="section__list__item"></div>
+
           </div>
-        </div>
-      </div>
-    </section>
-
-
-
-    <section class="section section--github">
-      <div class="layoutWidth">
-        <div class="section__content">
-          <h2 class="section__title">Source Code On Github</h2>
-          <p class="section__subtitle">@pavelkraleu/birdy-website</p>
-          <a class="button button--flat button--external">Open Github</a>
         </div>
       </div>
     </section>
@@ -227,6 +244,16 @@
           
           </div>
 
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--github">
+      <div class="layoutWidth">
+        <div class="section__content">
+          <h2 class="section__title">Source Code On Github</h2>
+          <p class="section__subtitle">@pavelkraleu/birdy-main</p>
+          <a class="button button--flat button--external" href="https://github.com/pavelkraleu/birdy-main" target="_blank">Open Github</a>
         </div>
       </div>
     </section>
@@ -253,6 +280,10 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/creative.min.js"></script>
+    <script src="js/smoothscroll.min.js"></script>
+    <script>
+      var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
 
   </body>
 
