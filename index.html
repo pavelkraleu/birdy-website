@@ -89,7 +89,7 @@
       <div class="layoutWidth">
         <div class="section">
           <div class="section__video">
-            <img src="img/foxes-placeholder-16x9.png" alt=""  class="section__video__background">
+            <img src="img/with_sky.jpg" alt=""  class="section__video__background">
             <div class="section__video__fade section__video__fade--right"></div>
           </div>
           <div class="section__content">
@@ -107,7 +107,10 @@
       <div class="layoutWidth">
         <div class="section__content">
           <h2>Real Time Data</h2>
-          <p>Praesent euismod tincidunt augue, quis euismod tellus consectetur at. Vivamus sit amet ex vel mauris efficitur elementum. Lorem ipsum dolor sit amet.</p>
+          <p>
+            Feeder sends every hour how many birds has visited. Weather information in Prague, where is feeder placed is obtained from Yahoo Wather API.
+            Data are recorded not only on Ethereum Blockchain, but also in <a href="https://docs.google.com/spreadsheets/d/1b-I_sqDUSi4DLrNH9eQgt1vGZ0ZJme892QrYkxmm1eg/edit#gid=0">Google Spreadsheet</a>.
+          </p>
         </div>
       </div>
 
@@ -119,32 +122,32 @@
           <img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTs6V7jyEmthUZur6LorhXdk64WYxaCRfuGZkATecqiBnEjMlHJ1LAyaK7tNAPL52aIoL1WJDv9m1U3/pubchart?oid=637816965&format=image">
         </div>
         
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script type="text/javascript">
-          google.charts.load('current', {'packages':['corechart']});
-          google.charts.setOnLoadCallback(drawChart);
+        <!--<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>-->
+        <!--<script type="text/javascript">-->
+          <!--google.charts.load('current', {'packages':['corechart']});-->
+          <!--google.charts.setOnLoadCallback(drawChart);-->
 
-          function drawChart() {
-            var data = google.visualization.arrayToDataTable([
-              ['Year', 'Sales', 'Expenses'],
-              ['2004',  1000,      400],
-              ['2005',  1170,      460],
-              ['2006',  660,       1120],
-              ['2007',  1030,      540]
-            ]);
+          <!--function drawChart() {-->
+            <!--var data = google.visualization.arrayToDataTable([-->
+              <!--['Year', 'Sales', 'Expenses'],-->
+              <!--['2004',  1000,      400],-->
+              <!--['2005',  1170,      460],-->
+              <!--['2006',  660,       1120],-->
+              <!--['2007',  1030,      540]-->
+            <!--]);-->
 
-            var options = {
-              // title: 'Company Performance',
-              curveType: 'function',
-              legend: { position: 'bottom' },
-                height: 300
-            };
+            <!--var options = {-->
+              <!--// title: 'Company Performance',-->
+              <!--curveType: 'function',-->
+              <!--legend: { position: 'bottom' },-->
+                <!--height: 300-->
+            <!--};-->
 
-            var chart = new google.visualization.LineChart(document.getElementById('line_top_x'));
+            <!--var chart = new google.visualization.LineChart(document.getElementById('line_top_x'));-->
 
-            chart.draw(data, options);
-          }
-        </script>
+            <!--chart.draw(data, options);-->
+          <!--}-->
+        <!--</script>-->
 
         </div>
     </section>
@@ -192,18 +195,24 @@
 
             <div class="section__list__item">
               <div class="section__list__item__image__container">
-                <img class="section__list__item__image" src="img/laptop_feeder.jpg" />
+                <img class="section__list__item__image" src="img/breadboard.jpg" />
               </div>
               <h3 class="section__list__item__title">Hardware</h3>
-              <p class="section__list__item__text">Nulla enim ipsum, accumsan id justo quis, cursus eleifend justo. Praesent euismod tincidunt augue, quis euismod tellus consectetur at. Vivamus sit amet ex vel mauris efficitur elementum in condimentum risus. Nunc quis dui leo. In sit amet venenatis lacus, eget ornare mauris.</p>
+              <p class="section__list__item__text">
+                Feeder runs on board SODAQ ExpLoRer which handles bird counting, connection to the LoRa network, NFC reader and also power management.
+                Feeder is connected to charger every evening and battery is stored in five 18650s.
+              </p>
             </div>
 
             <div class="section__list__item">
               <div class="section__list__item__image__container">
-                <img class="section__list__item__image" src="img/laptop_feeder.jpg" />
+                <img class="section__list__item__image" src="img/smart_contract.png" />
               </div>
               <h3 class="section__list__item__title">Smart Contract</h3>
-              <p class="section__list__item__text">Nulla enim ipsum, accumsan id justo quis, cursus eleifend justo. Praesent euismod tincidunt augue, quis euismod tellus consectetur at. Vivamus sit amet ex vel mauris efficitur elementum in condimentum risus. Nunc quis dui leo. In sit amet venenatis lacus, eget ornare mauris.</p>
+              <p class="section__list__item__text">
+                No one is in charge of the money, the smart contract itself is.
+
+              </p>
             </div>
 
             <div class="section__list__item">
@@ -219,6 +228,17 @@
                 <img class="section__list__item__image" src="img/laptop_feeder.jpg" />
               </div>
               <h3 class="section__list__item__title">LoRa</h3>
+              <p class="section__list__item__text">
+                Feeder sends its data over LoRa.
+                Connectivity has been kindly supplied by <a href="https://www.cra.cz/objevte-svet-iot">Ceske Radiokomunikace</a>
+              </p>
+            </div>
+
+            <div class="section__list__item">
+              <div class="section__list__item__image__container">
+                <img class="section__list__item__image" src="img/ph_okna.jpg" />
+              </div>
+              <h3 class="section__list__item__title">Paper Hub</h3>
               <p class="section__list__item__text">Nulla enim ipsum, accumsan id justo quis, cursus eleifend justo. Praesent euismod tincidunt augue, quis euismod tellus consectetur at. Vivamus sit amet ex vel mauris efficitur elementum in condimentum risus. Nunc quis dui leo. In sit amet venenatis lacus, eget ornare mauris.</p>
             </div>
 
@@ -233,15 +253,27 @@
       <div class="layoutWidth">
         <div class="section__content">
           <h2>Who Made This Possible</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lectus nibh, pellentesque non urna vitae, cursus maximus turpis. Maecenas nibh felis, pretium nec viverra eget, viverra nec metus.</p>
-          
+          <p>
+            This project wouldn't be possible without those people.
+          </p>
+
           <div class="section__list">
 
             <div class="section__list__item">
               <h3 class="section__list__item__title">Pavel Král</h3>
               <p class="section__list__item__text">Main developer and an amazing person ❤️</p>
             </div>
-          
+
+            <div class="section__list__item">
+              <h3 class="section__list__item__title">Josef Jelacic</h3>
+              <p class="section__list__item__text">Main developer and an amazing person ❤️</p>
+            </div>
+
+            <div class="section__list__item">
+              <h3 class="section__list__item__title">Ondřej Bárta</h3>
+              <p class="section__list__item__text">Main developer and an amazing person ❤️</p>
+            </div>
+
           </div>
 
         </div>
@@ -270,6 +302,7 @@
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script src="js/UIDReg.js"></script>
     <script>
       if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
         window.skrollrInstance = skrollr.init({
