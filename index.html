@@ -29,8 +29,8 @@
     <!-- Navigation -->
     <nav
       class="nav"
-      data-0="background: rgba(255, 255, 255, 0); backdrop-filter: blur(0px); box-shadow: 0 0px 0px rgba(0, 0, 0, 0);"
-      data-768="background: rgba(255, 255, 255, 0.99); backdrop-filter: blur(32px); box-shadow: 0 16px 64px rgba(0, 0, 0, 0.025);">
+      data-0="background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 80%, rgba(255, 255, 255, 0.8) 100%); backdrop-filter: blur(0px); box-shadow: 0 0px 0px rgba(0, 0, 0, 0);"
+      data-768="background-image: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 1) 100%); backdrop-filter: blur(32px); box-shadow: 0 16px 64px rgba(0, 0, 0, 0.025);">
       <div class="nav__content layoutWidth">
         <div class="nav__section">
           <a class="nav__item nav__item--title" onclick="skrollrInstance.animateTo(0, { duration: 500 })">Birdy</a>
@@ -74,7 +74,7 @@
       <div class="header__content">
         <div class="layoutWidth">
           <h1 class="header__title">Blockchain connected bird feeder</h1>
-          <p class="header__subtitle">More birds you feed, more Ethereum you make</p>
+          <p class="header__subtitle">More birds you feed, more Ethereum you&nbsp;make</p>
           <a class="header__action button button--flat button--arrowDown" href="#how-it-works">See How It Works</a>
           <!--
             <a class="header__action button button--flat button--external" href="https://github.com/pavelkraleu/birdy-main" target="_blank">Open In Github</a>
@@ -119,7 +119,7 @@
         <div id="line_top_x"></div>
 
         <div class="layoutWidth">
-          <img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTs6V7jyEmthUZur6LorhXdk64WYxaCRfuGZkATecqiBnEjMlHJ1LAyaK7tNAPL52aIoL1WJDv9m1U3/pubchart?oid=637816965&format=image">
+          <img class="chartImage" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTs6V7jyEmthUZur6LorhXdk64WYxaCRfuGZkATecqiBnEjMlHJ1LAyaK7tNAPL52aIoL1WJDv9m1U3/pubchart?oid=637816965&format=image">
         </div>
         
         <!--<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>-->
@@ -155,32 +155,30 @@
 
     <div class="layoutWidth">
       <section class="section section--registerRFIDCard" id="register-rfid"
-        data-bottom-bottom="box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);"
+        data-bottom="box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);"
         data-top-top="box-shadow: 0 16px 128px rgba(0, 0, 0, 0.1);">
-        <div class="layoutWidth">
-          <div class="section__content">
-            <div class="grid">
-              <div class="grid__column">
-                <h2>Register Your RFID Card</h2>
-                <p>
-                  Please submit UID of RFID card you will use and also Ethereum address on Kovan network where you want to receive reward.
-                  You need to have browser extension <a href="https://metamask.io/">MetaMask</a>.
-                  To get UID of your RFID you can use an Android phone with <a href="https://play.google.com/store/apps/details?id=se.anyro.nfc_reader&hl=en">NFC Reader</a> app.
-                </p>
-              </div>
-              <div class="grid__column">
-                <form class="form" action="">
-                  <label class="field">
-                    <span class="field__label">Card UID</span>
-                    <input id="txUID" type="text" class="field__input" placeholder="01020304050607" />
-                  </label>
-                  <label class="field">
-                    <span class="field__label">Ethereum Ropsten Address</span>
-                    <input id="txAddress" type="text" class="field__input" placeholder="0x00d8Ae40D9a06d0E7a2877B62E32eB959Afbe16D" />
-                  </label>
-                  <button id="UIDReg" class="button" type="submit">Submit</button>
-                </form>
-              </div>
+        <div class="section__content">
+          <div class="grid">
+            <div class="grid__column">
+              <h2 class="title title--noTopGutter">Register Your RFID Card</h2>
+              <p>
+                Please submit UID of RFID card you will use and also Ethereum address on Kovan network where you want to receive reward.
+                You need to have browser extension <a href="https://metamask.io/">MetaMask</a>.
+                To get UID of your RFID you can use an Android phone with <a href="https://play.google.com/store/apps/details?id=se.anyro.nfc_reader&hl=en">NFC Reader</a> app.
+              </p>
+            </div>
+            <div class="grid__column">
+              <form class="form" action="">
+                <label class="field">
+                  <span class="field__label">Card UID</span>
+                  <input id="txUID" type="text" class="field__input" placeholder="01020304050607" />
+                </label>
+                <label class="field">
+                  <span class="field__label">Ethereum Ropsten Address</span>
+                  <input id="txAddress" type="text" class="field__input" placeholder="0x00d8Ae40D9a06d0E7a2877B62E32eB959Afbe16D" />
+                </label>
+                <button id="UIDReg" class="button" type="submit">Submit</button>
+              </form>
             </div>
           </div>
         </div>

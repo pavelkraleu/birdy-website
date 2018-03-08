@@ -330,6 +330,12 @@ h1 {
   margin: 4rem 0 1rem;
 }
 
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
 h2 {
   font-family: 'Source Serif Pro Black';
   font-size: 2.25rem;
@@ -344,6 +350,10 @@ h3 {
 
 p {
   max-width: 30em;
+}
+
+.title--noTopGutter {
+  margin-top: 0;
 }
 
 .layoutWidth {
@@ -393,6 +403,7 @@ p {
 .nav__item--title {
   position: relative;
   opacity: 1;
+  transition: 400ms ease-in-out;
 }
 
 .nav__item--title::before {
@@ -403,11 +414,18 @@ p {
   background-image: url("../icons/logo.svg");
   top: -3px;
   left: -32px;
+  transition: 400ms ease-in-out;
 }
 
 @media (max-width: 1250px) {
   .nav__item--title::before {
     left: 0;
+  }
+}
+
+@media (max-width: 1250px) {
+  .nav__item--title {
+    padding-left: 32px;
   }
 }
 
@@ -469,22 +487,52 @@ p {
 .header__subtitle {
   font-family: 'Source Serif Pro Regular';
   font-size: 1.5rem;
+  line-height: 1.9rem;
   margin: 1rem 0 4rem;
+}
+
+@media (max-width: 768px) {
+  .header__subtitle {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .grid {
   display: flex;
 }
 
+@media (max-width: 768px) {
+  .grid {
+    flex-direction: column;
+  }
+}
+
 .grid__column {
   flex: 1;
+  margin-right: 32px;
+}
+
+.grid__column:last-of-type {
+  margin-right: 0;
+}
+
+@media (max-width: 768px) {
+  .grid__column {
+    margin-right: 0;
+    margin-bottom: 32px;
+  }
+  .grid__column:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 2rem auto;
+  margin: auto;
 }
 
 .field {
@@ -523,7 +571,7 @@ p {
   font-size: 0.875rem;
   padding: 8px 16px;
   margin: 0 8px 0 0;
-  background: transparent;
+  background: rgba(255, 255, 255, 0);
   border: none;
   text-transform: uppercase;
   text-decoration: none !important;
@@ -545,6 +593,10 @@ p {
   .button--flat {
     box-shadow: 0 0 0 1px transparent;
   }
+}
+
+.button--fill {
+  background: white;
 }
 
 .button--arrowDown, .button--play, .button--external {
@@ -589,6 +641,7 @@ p {
 .button:hover, .button:focus {
   color: inherit;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  background: white;
 }
 
 .button:active {
@@ -612,6 +665,21 @@ p {
   margin-bottom: 128px;
 }
 
+@media (max-width: 1250px) {
+  .section--registerRFIDCard {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section--registerRFIDCard {
+    padding: 24px;
+    box-shadow: none;
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+}
+
 .section__video {
   position: relative;
   width: 75%;
@@ -619,6 +687,13 @@ p {
   margin-left: -40px;
   border-radius: 4px;
   overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .section__video {
+    margin-left: 0;
+    width: 100%;
+  }
 }
 
 .section__video__background {
@@ -635,12 +710,29 @@ p {
   background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0.970426) 15.47%, rgba(255, 255, 255, 0.856354) 40.33%, rgba(255, 255, 255, 0) 100%);
 }
 
+@media (max-width: 768px) {
+  .section__video__fade--right {
+    width: 100%;
+    background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0.970426) 15.47%, rgba(255, 255, 255, 0.856354) 40.33%, rgba(255, 255, 255, 0) 100%);
+  }
+}
+
 .section--video .section__content {
   position: absolute;
   max-width: 100%;
   top: 50%;
   right: 160px;
   transform: translate(0, -50%);
+}
+
+@media (max-width: 768px) {
+  .section--video .section__content {
+    position: relative;
+    top: 0;
+    right: 0;
+    transform: none;
+    margin-top: -50%;
+  }
 }
 
 .section__list {
@@ -688,4 +780,8 @@ p {
 .section--github .section__subtitle  {
   font-family: 'Source Serif Pro Regular';
   font-size: 2rem;
+}
+
+.chartImage {
+  max-width: 100%;
 }
