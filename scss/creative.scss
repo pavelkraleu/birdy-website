@@ -69,6 +69,8 @@ $nav__height: 80px;
     width: 100%;
     top: 0;
     min-height: $nav__height;
+    background: white;
+    box-shadow: 0 16px 64px rgba(0, 0, 0, 0.025);
 }
 .nav__content {
     display: flex;
@@ -133,9 +135,24 @@ $nav__height: 80px;
     &:last-of-type {
         margin-right: 0;
     }
+
+    @media (max-width: 960px) {
+        &.button:not(.button--external) {
+            display: none;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &:not(.nav__item--title):not(.button--external)  {
+            display: none;
+        }
+    }
 }
 .nav__divider {
     opacity: 0.25;
+    @media (max-width: 768px) {
+        display: none;
+    }
 }
 
 
@@ -491,4 +508,3 @@ footer {
 .chartImage {
     max-width: 100%;
 }
-
