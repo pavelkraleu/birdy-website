@@ -782,9 +782,31 @@ p {
 }
 
 .section__list__item {
-  max-width: 320px;
-  width: 100%;
+  width: 33%;
   margin-bottom: 40px;
+  padding: 32px;
+  margin: -32px;
+}
+
+@media (max-width: 1250px) {
+  .section__list__item {
+    padding: 16px;
+    margin: -16px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section__list__item {
+    min-width: 50%;
+  }
+}
+
+@media (max-width: 420px) {
+  .section__list__item {
+    min-width: 100%;
+    box-sizing: content-box;
+  }
 }
 
 .section__list__item__image__container {
@@ -799,6 +821,14 @@ p {
   position: relative;
   width: 100%;
   z-index: -1;
+}
+
+.section__list__item__title  {
+  margin: 16px;
+}
+
+.section__list__item__text  {
+  margin: 16px;
 }
 
 .section--github {
