@@ -685,6 +685,10 @@ p {
   position: relative;
 }
 
+#register-rfid {
+  padding-top: 128px;
+}
+
 .section--registerRFIDCard {
   box-shadow: 0 16px 64px rgba(0, 0, 0, 0.1);
   max-width: 1200px;
