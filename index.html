@@ -62,7 +62,9 @@
     <header class="header">
 
       <div class="header__background">
-        <img class="header__background__object" src="img/birdy_in_paralelni_polis.jpg" alt="Birdy in Paralelní Polis">
+        <img class="header__background__object" src="img/birdy_in_paralelni_polis.jpg" alt="Birdy in Paralelní Polis"
+          data-0="opacity: 1; object-position: 0px auto; filter: blur(0px)"
+          data-500="opacity: 0.1; object-position: 500px auto; filter: blur(10px)">
         <!--
           <video loop muted autoplay
             class="header__background__object"
@@ -122,7 +124,7 @@
         <div id="line_top_x"></div>
 
         <div class="layoutWidth">
-          <img class="chartImage" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTs6V7jyEmthUZur6LorhXdk64WYxaCRfuGZkATecqiBnEjMlHJ1LAyaK7tNAPL52aIoL1WJDv9m1U3/pubchart?oid=637816965&format=image">
+          <svg id="birdyRealTime" width="100%" height="200"></svg>
         </div>
         
         <!--<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>-->
@@ -321,11 +323,13 @@
     </script>
 
     <!-- Custom scripts for this template -->
-    <script src="js/creative.min.js"></script>
     <script src="js/smoothscroll.min.js"></script>
     <script>
       var scroll = new SmoothScroll('a[href*="#"]');
     </script>
+    <script src="js/tabletop.min.js"></script>
+    <script src="js/d3.min.js"></script>
+    <script src="js/creative.min.js"></script>
 
   </body>
 
