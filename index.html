@@ -39,7 +39,7 @@
           <span class="nav__divider">&middot;</span>
           <a class="nav__item" href="#real-time-data">Real Time Data</a>
           <span class="nav__divider">&middot;</span>
-          <a class="nav__item" href="#register-rfid">Register Your RFID</a>
+          <a class="nav__item" href="#register-rfid">Register Your RFID card</a>
         </div>
 
         <!--<div class="nav__section">-->
@@ -102,7 +102,7 @@
             <p>Birdy is installed in Prague, Czech Republic and it's budget is made up of small voluntary contributions by people which want to support birds in local area.</p>
             <p>Birdy's sensor counts birds flying in and uses that number in the smart contract, so your reward is equal to how many birds were attracted by the seeds and grains you brought.</p>
             <p>Before you do that, it is neccessary that you fill in the serial number of any kind of RFID card you are going to use and ethereum adress you would like to get the reward in on the website. Then, when you come to feed the birds, you just read your RFID card on the RFID reader and your ethereum adress will be used in the smart contract until another person reads his RFID card.</p>
-            <button class="button button--flat button--play">Play Video</button>
+            <!--<button class="button button&#45;&#45;flat button&#45;&#45;play">Play Video</button>-->
           </div>
         </div>
       </div>
@@ -179,7 +179,7 @@
                   <input id="txUID" type="text" class="field__input" placeholder="01020304050607" />
                 </label>
                 <label class="field">
-                  <span class="field__label">Ethereum Ropsten Address</span>
+                  <span class="field__label">Ethereum Kovan Address</span>
                   <input id="txAddress" type="text" class="field__input" placeholder="0x00d8Ae40D9a06d0E7a2877B62E32eB959Afbe16D" />
                 </label>
                 <button id="UIDReg" class="button" type="submit">Submit</button>
@@ -214,17 +214,17 @@
               <h3 class="section__list__item__title">Smart Contract</h3>
               <p class="section__list__item__text">
                 No one is in charge of the money, the smart contract itself is.
-
+                  Source code can be <a href="https://github.com/pavelkraleu/birdy-main/blob/master/contract/Birdy.sol">seen here</a>
               </p>
             </div>
 
-            <div class="section__list__item">
-              <div class="section__list__item__image__container">
-                <img class="section__list__item__image" src="img/laptop_feeder.jpg" />
-              </div>
-              <h3 class="section__list__item__title">Lessons Learned</h3>
-              <p class="section__list__item__text">Nulla enim ipsum, accumsan id justo quis, cursus eleifend justo. Praesent euismod tincidunt augue, quis euismod tellus consectetur at. Vivamus sit amet ex vel mauris efficitur elementum in condimentum risus. Nunc quis dui leo. In sit amet venenatis lacus, eget ornare mauris.</p>
-            </div>
+            <!--<div class="section__list__item">-->
+              <!--<div class="section__list__item__image__container">-->
+                <!--<img class="section__list__item__image" src="img/laptop_feeder.jpg" />-->
+              <!--</div>-->
+              <!--<h3 class="section__list__item__title">Lessons Learned</h3>-->
+              <!--<p class="section__list__item__text">Nulla enim ipsum, accumsan id justo quis, cursus eleifend justo. Praesent euismod tincidunt augue, quis euismod tellus consectetur at. Vivamus sit amet ex vel mauris efficitur elementum in condimentum risus. Nunc quis dui leo. In sit amet venenatis lacus, eget ornare mauris.</p>-->
+            <!--</div>-->
 
             <div class="section__list__item">
               <div class="section__list__item__image__container">
@@ -242,12 +242,28 @@
                 <img class="section__list__item__image" src="img/ph_okna.jpg" />
               </div>
               <h3 class="section__list__item__title">Paper Hub</h3>
-              <p class="section__list__item__text">Nulla enim ipsum, accumsan id justo quis, cursus eleifend justo. Praesent euismod tincidunt augue, quis euismod tellus consectetur at. Vivamus sit amet ex vel mauris efficitur elementum in condimentum risus. Nunc quis dui leo. In sit amet venenatis lacus, eget ornare mauris.</p>
+              <p class="section__list__item__text">
+                  Birdy is located in <a href="http://paperhub.cz/eng/">Paper Hub</a>.
+                  Paper Hub is a Prague-based coworking space for liberal-minded, innovative freelancers and startups interested in decentralization, cryptotechnologies and digital freedom in general. With a coffee bar, hackerspace and a think-tank it makes an "all inclusive package" of Paralelni Polis, the Ztohoven group project.
+              </p>
             </div>
+
+              <div class="section__list__item">
+              <div class="section__list__item__image__container">
+                <img class="section__list__item__image" src="img/ethcc.jpg" />
+              </div>
+              <h3 class="section__list__item__title">EthCC</h3>
+              <p class="section__list__item__text">
+                Birdy has been unveiled on <a href="https://ethcc.io/">EthCC in Paris</a>
+              </p>
+            </div>
+
 
             <div class="section__list__item"></div>
 
           </div>
+
+
         </div>
       </div>
     </section>
