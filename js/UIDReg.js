@@ -61,7 +61,7 @@ var abi = [
         "type": "function"
     }
 ];
-var contract = web3.eth.contract(abi).at("0x65e6726f6e7a7bc48b6a173f56e436f29e8951d0");
+var contract = web3.eth.contract(abi).at("0xe55E2c3A123dc770Af42eeDF8c2abDBF1B96b618");
 
 $('#UIDReg').off().click(function(){
     $('#UIDReg').prop('disabled', true);
