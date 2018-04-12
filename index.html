@@ -99,16 +99,25 @@
           </div>
           <div class="section__content">
             <h2>How It Works</h2>
-            <p>Do you remember that <a href="https://www.youtube.com/watch?v=Uh6V1wne5OY">guy in Africa which deliver water to animals</a> ? We believe that Blockchain can help people doing similar things.</p>
+            <p>Do you remember that <a target="_blank" href="https://www.youtube.com/watch?v=Uh6V1wne5OY">guy in Africa which deliver water to animals</a> ? We believe that Blockchain can help people doing similar things.</p>
             <hr>
             <p>Birdy is installed in Prague, Czech Republic and it's budget is made up of small voluntary contributions by people which want to support birds in local area.</p>
             <p>Birdy's sensor counts birds flying in and uses that number in the smart contract, so your reward is equal to how many birds were attracted by the seeds and grains you brought.</p>
             <!--<p>Before you do that, it is neccessary that you fill in the serial number of any kind of RFID card you are going to use and ethereum adress you would like to get the reward in on the website. Then, when you come to feed the birds, you just read your RFID card on the RFID reader and your ethereum adress will be used in the smart contract until another person reads his RFID card.</p>-->
-            <!--<button class="button button&#45;&#45;flat button&#45;&#45;play">Play Video</button>-->
+            <button class="button button&#45;&#45;flat button&#45;&#45;play" onclick="document.querySelector('.dialog').classList.add('dialog--show')">Play Video</button>
+          </div>
+        </div>
+
+        <div class="dialog" onclick="this.classList.remove('dialog--show')">
+          <div class="dialog__content">
+            <h2>How It Works</h2>
+            <a class="link dialog__closeButton">Close</a>
+            <iframe class="dialog__video" width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/DLzxrzFCyOs?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </section>
+
 
     <section class="section section--realTimeData" id="real-time-data">
       <div class="layoutWidth">
